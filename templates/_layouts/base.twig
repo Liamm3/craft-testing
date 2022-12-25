@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ siteName }}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>
+                    <a href="{{ url('/') }}">Home</a>
+                </li>
+                <li>
+                    <a href="{{ url('/posts') }}">Posts</a>
+                </li>
+            </ul>
+        </nav>
+        {% block content %}{% endblock %}
+
+        {{ craft.vite.script("src/js/app.js") }}
+        {% block scripts %}{% endblock %}
+    </body>
+</html>

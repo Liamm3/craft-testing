@@ -1,0 +1,27 @@
+dateModified: 1672000366
+email:
+  fromEmail: liam.wohlfart@tuta.io
+  fromName: craft-testing
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    39a89327-58fa-4fce-a908-dfaa299afb0b: craft-testing # craft-testing
+    77ec8cb9-ce99-48cd-a5de-9a3f78895d02: craft-testing # craft-testing
+    835bcb00-5059-482a-8e93-09d08f9b2fe5: Common # Common
+plugins:
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: solo
+  live: true
+  name: craft-testing
+  schemaVersion: 4.0.0.9
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true
