@@ -1,9 +1,9 @@
 {% extends "_layouts/base" %}
 
 {% block content %}
-    <h1>Welcome to {{ siteName }}!!</h1>
+    <h1 class="text-2xl">Welcome to {{ siteName }}!!</h1>
 {% endblock %}
 
 {% block scripts %}
-    {{ craft.vite.script("src/js/pages/index.js")}}
+    {{ craft.vite.script("src/js/pages/index.ts")}}
 {% endblock %}

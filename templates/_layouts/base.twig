@@ -4,6 +4,7 @@
         <title>{{ siteName }}</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main.css">
     </head>
     <body>
         <nav>
@@ -18,7 +19,7 @@
         </nav>
         {% block content %}{% endblock %}
 
-        {{ craft.vite.script("src/js/app.js") }}
+        {{ craft.vite.script("src/js/app.ts") }}
         {% block scripts %}{% endblock %}
     </body>
 </html>

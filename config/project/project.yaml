@@ -1,14 +1,22 @@
-dateModified: 1672000366
+dateModified: 1672073802
 email:
   fromEmail: liam.wohlfart@tuta.io
   fromName: craft-testing
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
+    5fbd4a25-ca6f-4034-b3a8-ab54bd4c6ee8: Body # Body
     39a89327-58fa-4fce-a908-dfaa299afb0b: craft-testing # craft-testing
     77ec8cb9-ce99-48cd-a5de-9a3f78895d02: craft-testing # craft-testing
     835bcb00-5059-482a-8e93-09d08f9b2fe5: Common # Common
+    6048d56f-8aa9-433c-8656-692dbe74cfc0: Default # Default
+    829911df-e853-4269-9854-0a95ee8c65c5: Posts # Posts
+    a72f3aef-9c28-4bcc-98fb-578f8dccf5d7: Posts # Posts
 plugins:
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
   vite:
     edition: standard
     enabled: true

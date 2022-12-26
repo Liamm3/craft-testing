@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: posts
+name: Posts
+propagationMethod: all
+siteSettings:
+  39a89327-58fa-4fce-a908-dfaa299afb0b: # craft-testing
+    enabledByDefault: true
+    hasUrls: true
+    template: posts/_entry
+    uriFormat: 'posts/{slug}'
+type: channel

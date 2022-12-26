@@ -1,0 +1,55 @@
+fieldLayouts:
+  17f29e5b-37c8-4903-81e4-3927dd5a680f:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 82f6f71b-eef3-4b3b-863d-1bbe7ea0a5c2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5fbd4a25-ca6f-4034-b3a8-ab54bd4c6ee8 # Body
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 908f2305-3d39-440e-8aa3-366e83755243
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 95c074af-8b09-4d82-81b1-a805456bed57
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 829911df-e853-4269-9854-0a95ee8c65c5 # Posts
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
