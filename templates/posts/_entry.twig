@@ -1,6 +1,15 @@
 {% extends "_layouts/base" %}
 
+{% set imageTransforms = {
+    width: 300,
+    height: 300,
+    mode: 'thumb'
+} %}
+
+{% set previewImage = entry.previewImage.one() %}
+
 {% block content %}
     <h1>{{ entry.title }}</h1>
+    <img src="{{ previewImage.getUrl(imageTransforms) }}" alt="{{ entry.title }}">
     {{ entry.body }}
 {% endblock %}
