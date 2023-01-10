@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="/main.css">
     </head>
     <body>
-        <nav>
+        <nav class="bg-red-500">
             <ul>
                 <li>
                     <a href="{{ url('/') }}">Home</a>
@@ -15,8 +15,11 @@
                 <li>
                     <a href="{{ url('/posts') }}">Posts</a>
                 </li>
+                <li>
+                    <a href="{{ url('/login') }}">Login</a>
+                </li>
             </ul>
-        </nav>
+        </navcl>
         {% block content %}{% endblock %}
 
         {{ craft.vite.script("src/js/app.ts") }}
