@@ -1,0 +1,24 @@
+{
+  "src/js/pages/index.css": {
+    "file": "assets/index-daa5e9d1.css",
+    "src": "src/js/pages/index.css"
+  },
+  "src/js/app.ts": {
+    "file": "assets/app-9bdcd406.js",
+    "src": "src/js/app.ts",
+    "isEntry": true
+  },
+  "src/js/pages/posts/index.ts": {
+    "file": "assets/js/pages/posts/index-7edb3666.js",
+    "src": "src/js/pages/posts/index.ts",
+    "isEntry": true
+  },
+  "src/js/pages/index.ts": {
+    "file": "assets/js/pages/index-44303f9a.js",
+    "src": "src/js/pages/index.ts",
+    "isEntry": true,
+    "css": [
+      "assets/index-daa5e9d1.css"
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"index-7edb3666.js","sources":["../../../../../../src/js/pages/posts/index.ts"],"sourcesContent":["import { getPosts } from \"../../lib\";\n\nconsole.log(\"hello posts!\");\n// console.log(await getPosts())"],"names":[],"mappings":"AAEA,QAAQ,IAAI,cAAc"}

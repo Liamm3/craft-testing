@@ -1,0 +1,1 @@
+{"version":3,"file":"app-9bdcd406.js","sources":["../../../src/js/app.ts"],"sourcesContent":["if (import.meta.hot) {\n    import.meta.hot.accept(() => {});\n}\n\nconsole.log(\"Hello app!!\");\n"],"names":[],"mappings":"AAIA,QAAQ,IAAI,aAAa"}

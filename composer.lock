@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "10013c78cb59359fb2e19fedcd6d69ff",
+    "content-hash": "3a71fab6caadceb26493c1e7b24f03e1",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -4976,16 +4976,16 @@
     "packages-dev": [
         {
             "name": "craftcms/generator",
-            "version": "1.0.4",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/generator.git",
-                "reference": "37d780f6b2f8b558bda3eaf816cbecc92d39139b"
+                "reference": "80b2ee7595f8857a8282443a352243b61b9faae8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/generator/zipball/37d780f6b2f8b558bda3eaf816cbecc92d39139b",
-                "reference": "37d780f6b2f8b558bda3eaf816cbecc92d39139b",
+                "url": "https://api.github.com/repos/craftcms/generator/zipball/80b2ee7595f8857a8282443a352243b61b9faae8",
+                "reference": "80b2ee7595f8857a8282443a352243b61b9faae8",
                 "shasum": ""
             },
             "require": {
@@ -5031,7 +5031,7 @@
                 "rss": "https://github.com/craftcms/generator/releases.atom",
                 "source": "https://github.com/craftcms/generator"
             },
-            "time": "2022-12-24T12:59:47+00:00"
+            "time": "2023-01-11T15:59:08+00:00"
         },
         {
             "name": "nette/php-generator",
@@ -5394,5 +5394,5 @@
     "platform-overrides": {
         "php": "8.0.2"
     },
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }

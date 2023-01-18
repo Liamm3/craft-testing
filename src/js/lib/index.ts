@@ -1,17 +1,15 @@
 export interface Post {
     title: string;
     body: string;
+    uri: string;
 }
 
-const MOCK_POSTS: Post[] = [
-    { title: "Post One", body: "My first Post!" },
-    { title: "Post Two", body: "My second Post!" },
-];
+const snakeCaseToLowerCamelCase = (s: string): string =>
+    s.replace(/-./g, x=>x[1].toUpperCase())
 
-export function getPosts(): Promise<Post[]> {
-    return new Promise(resolve =>
-        setTimeout(() => {
-            resolve(MOCK_POSTS)
-        }, 2000)
-    );
-}
+export const getRawDataFromScript = (attribute: string): string => {
+    const element = document.querySelector(`script[data-${attribute}]`);
+    if (element instanceof HTMLElement) {
+        return element.dataset[snakeCaseToLowerCamelCase(attribute)];
+    }
+};
