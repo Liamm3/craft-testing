@@ -1,0 +1,13 @@
+{% extends "_layouts/base" %}
+
+{% set baseUrl = "/companies/no-sfc-vue/" %}
+
+{% set links = [
+    { location: baseUrl ~ "async", text: "Async Companies" },
+    { location: baseUrl ~"server-side", text: "Server-side Companies" }
+] %}
+
+{% block content %}
+    {% include "_includes/heading" with { text: "Companies - No SFC Vue"} %}
+    {% include "_includes/grid-list" with { links } %}
+{% endblock %}

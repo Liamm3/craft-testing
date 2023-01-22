@@ -52,6 +52,7 @@ export default defineConfig(({command}) => ({
       '@': path.resolve(__dirname, 'src'),
       '@css': path.resolve(__dirname, 'src/css'),
       '@js': path.resolve(__dirname, 'src/js'),
+      '@vue-dist': path.resolve(__dirname, 'node_modules/vue/dist/vue.esm-bundler')
     },
   },
   server: {

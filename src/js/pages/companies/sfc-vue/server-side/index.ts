@@ -1,4 +1,4 @@
-import {createApp, onMounted} from "vue";
+import { createApp } from "vue";
 import CompanyComponent from "../../../../components/Companies.vue";
 import { getRawDataFromScript, Company  } from "../../../../lib";
 

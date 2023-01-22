@@ -1,0 +1,20 @@
+{% extends "_layouts/base" %}
+
+{% set companies = craft
+    .entries()
+    .section("companies")
+    .all() %}
+
+{% set transformedCompanies =
+    companies | map(company => company.leanTransform) | json_encode | raw  %}
+
+{% block content %}
+    {% include "_includes/heading" with { text: "Companies - No SFC Vue - Server Side"} %}
+    <div id="companies-container">
+        <company-list :companies="{{ transformedCompanies }}"></company-list>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ craft.vite.script("src/js/pages/companies/no-sfc/server-side/index.ts") }}
+{% endblock %}
