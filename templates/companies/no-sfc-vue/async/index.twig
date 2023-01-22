@@ -2,8 +2,12 @@
 
 {% block content %}
     {% include "_includes/heading" with { text: "Companies - No SFC Vue - Async"} %}
+    <div id="async-companies-container">
+        <company-list :companies="companies"></company-list>
+        <pulse-loader :loading="loading"></pulse-loader>
+    </div>
 {% endblock %}
 
 {% block scripts %}
-    {{ craft.vite.script("src/js/pages/companies/no-sfc-vue/async/index.ts" }}
+    {{ craft.vite.script("src/js/pages/companies/no-sfc/async/index.ts") }}
 {% endblock %}

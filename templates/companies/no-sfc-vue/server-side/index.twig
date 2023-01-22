@@ -11,7 +11,9 @@
 {% block content %}
     {% include "_includes/heading" with { text: "Companies - No SFC Vue - Server Side"} %}
     <div id="companies-container">
-        <company-list :companies="{{ transformedCompanies }}"></company-list>
+        <company-list
+                :companies="{{ transformedCompanies }}"
+        ></company-list>
     </div>
 {% endblock %}
 
