@@ -1,0 +1,28 @@
+{% extends "_layouts/base" %}
+
+{% set companies = craft
+    .entries()
+    .section("companies")
+    .all() %}
+
+{% set transformedCompanies =
+    companies | map(company => company.leanTransform) | json_encode %}
+
+{% block content %}
+    {% include "_includes/heading" with { text: "Companies - Petite Vue - Server Side"} %}
+    <div v-scope>
+        <ul v-for="company in companies">
+            <li>#{company.title} - #{company.city}</li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script type="module">
+        import { createApp } from "https://unpkg.com/petite-vue?module";
+        createApp({
+            companies: {{ transformedCompanies | raw }},
+            $delimiters: ['#{', '}']
+        }).mount()
+    </script>
+{% endblock %}

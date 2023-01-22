@@ -1,6 +1,6 @@
 {% extends "_layouts/base" %}
 
-{% set baseUrl = "companies/petite-vue" %}
+{% set baseUrl = "petite-vue/" %}
 
 {% set links = [
     { location: baseUrl ~ "server-side", text: "Server Side" },
@@ -9,4 +9,5 @@
 
 {% block content %}
     {% include "_includes/heading" with { text: "Companies - Petite Vue" } %}
+    {% include "_includes/grid-list" with { links } %}
 {% endblock %}
