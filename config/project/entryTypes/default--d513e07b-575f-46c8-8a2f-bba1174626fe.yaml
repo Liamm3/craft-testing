@@ -1,0 +1,139 @@
+fieldLayouts:
+  6b5c9ef8-9ce5-4234-ae5d-3c6742a026b8:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: bdcdca3c-760f-41dc-8eee-a8fc0314eb8a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 37d3cc23-e2b0-4af8-82a0-f53a65412cbd # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b5654cba-ebfa-49ba-b33f-dc72d9ccbc92
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 43e53a08-867a-444e-b3dc-c7318c7753e5 # E-Mail
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 294b56c3-d730-48f7-bf57-4bb650731a70
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: cd5f9edf-08f6-4fdb-aac1-10a4d5d7c96c # Longitude
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e91e9c01-f20e-460c-9b9e-b32ed5d36cfc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 65a01919-6c22-442a-bc88-fb28bea4296c # Latitude
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f13ae564-00ff-4e86-b3e8-9d81948204e0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 020a6bd6-9734-49a0-a09f-ad861ae14069 # Postal code
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2936fdc2-b33f-4656-b755-7ebe79d68100
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 456584eb-b3da-4bf3-bb8c-ad356c703a7d # City
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 263ae414-849e-4d59-b66c-8cbe461349dc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 97fc2712-4f93-4293-bc88-2f2eeb2a97ab # Street name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d0ab7046-b247-486c-abab-f1fea89dd0a0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 92b5b41c-1150-4229-82af-7a5e1a736d95 # Street number
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b25d3a04-85fa-4685-9591-7d3308d5e6e7
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c815deed-84a6-46ec-8c28-ea88285a7dc7
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 3c8ef1c1-add1-409c-ad8e-1b040ac2cddc # Companies
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

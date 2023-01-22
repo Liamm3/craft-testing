@@ -1,0 +1,27 @@
+{% extends "_layouts/base" %}
+
+{% set companies = craft
+    .entries()
+    .section("companies")
+    .all() %}
+
+{% block content %}
+    {% include "_includes/heading" with { text: "Companies - SFC Vue - Server Side"} %}
+    <div id="companies-container"></div>
+{% endblock %}
+
+{% js %}
+    window.craftData = {
+        companies: {{ companies | json_encode | raw }}
+    };
+{% endjs %}
+
+{% block scripts %}
+    {{ craft.vite.script(
+        "src/js/pages/companies/sfc-vue/server-side/index.ts",
+        true,
+        {
+            'data-companies': companies | map(company => company.leanTransform) | json_encode | raw
+        }
+    ) }}
+{% endblock %}

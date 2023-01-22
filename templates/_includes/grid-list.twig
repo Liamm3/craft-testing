@@ -1,0 +1,7 @@
+<ul class="grid grid-cols-4 gap-5">
+    {% for link in links %}
+        <li class="text-center">
+            <a href="{{ link.location }}" class="block p-5 border-stone-400 hover:bg-stone-400 border-2">{{ link.text }}</a>
+        </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: companies
+name: Companies
+propagationMethod: all
+siteSettings:
+  39a89327-58fa-4fce-a908-dfaa299afb0b: # craft-testing
+    enabledByDefault: true
+    hasUrls: true
+    template: companies/_entry
+    uriFormat: 'companies/{slug}'
+type: channel

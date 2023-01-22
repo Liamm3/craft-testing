@@ -1,0 +1,10 @@
+{% extends "_layouts/base" %}
+
+{% block content %}
+    {% include "_includes/heading" with { text: "Companies - SFC Vue - Async"} %}
+    <div id="async-companies-container"></div>
+{% endblock %}
+
+{% block scripts %}
+    {{ craft.vite.script("src/js/pages/companies/sfc-vue/async/index.ts") }}
+{% endblock %}

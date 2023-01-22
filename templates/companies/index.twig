@@ -1,0 +1,14 @@
+{% extends "_layouts/base" %}
+
+{% set baseUrl = "companies/" %}
+
+{% set links = [
+    { location: baseUrl ~ "sfc-vue", text: "SFC Vue" },
+    { location: baseUrl ~ "no-sfc-vue", text: "No SFC Vue" },
+    { location: baseUrl ~ "petite-vue", text: "Petite Vue" }
+] %}
+
+{% block content %}
+    {% include "_includes/heading" with { text: "Companies" } %}
+    {% include "_includes/grid-list" with { links } %}
+{% endblock %}

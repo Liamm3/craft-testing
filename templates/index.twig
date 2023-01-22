@@ -1,8 +1,14 @@
 {% extends "_layouts/base" %}
 
+{% set links = [
+    { location: "/posts", text: "Posts" },
+    { location: "/async-posts", text: "Async Posts" },
+    { location: "/companies", text: "Companies" },
+] %}
+
 {% block content %}
-    <h1 class="text-2xl">Welcome to {{ siteName }}!</h1>
-    <div id="component-container"></div>
+    <h1 class="text-3xl text-center mb-5">Welcome to {{ siteName }}!</h1>
+    {% include "_includes/grid-list" with { links } %}
 {% endblock %}
 
 {% block scripts %}

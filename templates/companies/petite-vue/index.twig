@@ -1,0 +1,12 @@
+{% extends "_layouts/base" %}
+
+{% set baseUrl = "companies/petite-vue" %}
+
+{% set links = [
+    { location: baseUrl ~ "server-side", text: "Server Side" },
+    { location: baseUrl ~ "async", text: "Async" },
+] %}
+
+{% block content %}
+    {% include "_includes/heading" with { text: "Companies - Petite Vue" } %}
+{% endblock %}

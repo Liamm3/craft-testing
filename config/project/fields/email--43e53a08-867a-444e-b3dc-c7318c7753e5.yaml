@@ -1,0 +1,12 @@
+columnSuffix: obuxobyf
+contentColumnType: string
+fieldGroup: 4579a2df-4698-436d-81c2-092ce5a5c11f # Company
+handle: email
+instructions: null
+name: E-Mail
+searchable: false
+settings:
+  placeholder: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Email
