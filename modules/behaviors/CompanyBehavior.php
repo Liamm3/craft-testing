@@ -14,6 +14,7 @@ class CompanyBehavior extends Behavior {
     public function getLeanTransform(): array {
         $transformedEntry = [
             "title" => $this->owner->title,
+            "url" => $this->owner->url,
         ];
         $fieldLayout = $this->owner->getFieldLayout();
         $fieldLayoutFields = $fieldLayout->getCustomFields();

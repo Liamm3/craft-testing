@@ -1,9 +1,9 @@
-columnSuffix: enhttmam
+columnSuffix: dtkvoabc
 contentColumnType: text
-fieldGroup: 4579a2df-4698-436d-81c2-092ce5a5c11f
-handle: streetNumber
+fieldGroup: a72f3aef-9c28-4bcc-98fb-578f8dccf5d7 # Posts
+handle: generalId
 instructions: null
-name: 'Street number'
+name: 'General ID'
 searchable: false
 settings:
   byteLimit: null

@@ -26,6 +26,7 @@ export interface AppContainer {
 const snakeCaseToLowerCamelCase = (s: string): string =>
     s.replace(/-./g, x=>x[1].toUpperCase())
 
+
 export const getRawDataFromScript = (attribute: string): string => {
     const element = document.querySelector(`script[data-${attribute}]`);
     if (element instanceof HTMLElement) {

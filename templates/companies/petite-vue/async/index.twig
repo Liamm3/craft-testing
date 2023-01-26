@@ -1,0 +1,150 @@
+{% extends "_layouts/base" %}
+
+{% block content %}
+  {% include "_includes/heading" with { text: "Companies - Petite Vue - Async"} %}
+  <div
+    @vue:mounted="fetchCompanies()"
+    v-scope
+  >
+    <div class="mb-5" @click="viewAddCompanyForm()" v-if="!showForm" v-scope="Button({ text: 'Add Company', color: 'emerald' })"></div>
+    <ul v-show="showCompanies && !loading" class="grid grid-cols-4 gap-4">
+      <li v-for="company in companies" class="border-stone-400 border-solid border-2 p-3 rounded">
+        <h2 class="text-center mb-3">
+          #{company.title}
+        </h2>
+        <img src="https://place-hold.it/300" alt="placeholdit" class="rounded mb-3 w-full">
+        <div class="w-full" @click="viewCompany(company)" v-scope="Button({ text: 'View', color: 'sky' })"></div>
+      </li>
+    </ul>
+    <p v-if="loading">Loading...</p>
+    <div v-if="showDetails">
+      <h2 class="text-xl">#{selectedCompany.title}</h2>
+      <img src="https://place-hold.it/300" alt="placeholdit">
+      <p>#{selectedCompany.postalCode} #{selectedCompany.city}</p>
+      <p>#{selectedCompany.streetName} #{selectedCompany.streetNumber}</p>
+      <div v-html="selectedCompany.description"></div>
+      <div @click="viewCompanies()" v-scope="Button({ text: 'Go Back', color: 'sky' })"></div>
+    </div>
+    <div v-if="showForm">
+      <form @submit.prevent="processForm" v-scope="Form()">
+        <fieldset v-for="(field, name) in fields">
+          <label :for="name">#{name}:</label>
+          <textarea
+            v-if="field.type === 'textarea'"
+            :name="name"
+            :id="name"
+            cols="30"
+            rows="10"
+            v-model="field.value"
+          ></textarea>
+          <input v-else :type="field.type" :name="name" :id="name" v-model="field.value">
+        </fieldset>
+        <div v-scope="Button({ text: 'Submit', color: 'emerald' })"></div>
+      </form>
+      <div @click="viewCompanies()" v-scope="Button({ text: 'Go Back', color: 'sky' })"></div>
+    </div>
+  </div>
+
+  <template id="button-template">
+    <button
+      class="py-2 px-3 rounded w-full"
+      @vue:mounted="$el.classList.add(`bg-${color}-500`, `hover:bg-${color}-600`)"
+    >
+      #{text}
+    </button>
+  </template>
+{% endblock %}
+
+{% block scripts %}
+  <script type="module">
+    import { createApp } from "https://unpkg.com/petite-vue?module";
+
+    const pascalCaseToSnakeCase = s =>
+      s.replace(/[A-Z]/g, letter => `_${letter.toLowerCase()}`);
+
+    function Form() {
+      return {
+        fields: {
+          companyName: { value: '', type: 'text', errors: [] },
+          description: { value: '', type: 'textarea', errors: [] },
+          latitude: { value: '', type: 'text', errors: [] },
+          longitude: { value: '', type: 'text', errors: [] },
+          postalCode: { value: '',  type: 'text', errors: [] },
+          city: { value: '', type: 'text', errors: [] },
+          streetName: { value: '', type: 'text', errors: [] },
+          streetNumber: { value: '', type: 'text', errors: [] },
+          email: { value: '', type: 'email', errors: [] }
+        },
+        async processForm() {
+          this.validate();
+          let company = {};
+          Object.keys(this.fields).forEach(key => {
+            company[key] = this.fields[key].value
+          });
+          const response = await fetch('/actions/site-module/company/create', {
+            method: 'post',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(company)
+          });
+          const jsonResponse = await response.json();
+          Object.keys(this.fields).forEach(key => {
+            this.fields[key].value = "";
+          });
+          if (jsonResponse.success) {
+            this.companies.push(jsonResponse.company);
+            this.viewCompanies();
+          } else {
+            console.log(jsonResponse.errors);
+          }
+        },
+        validate() {},
+      };
+    }
+
+    function Button(props) {
+      return {
+        text: props.text,
+        color: props.color,
+        $template: '#button-template'
+      };
+    }
+
+    createApp({
+      Button,
+      Form,
+      companies: null,
+      selectedCompany: null,
+      loading: false,
+      showDetails: false,
+      showForm: false,
+      showCompanies: true,
+      async fetchCompanies() {
+        this.loading = true;
+        setTimeout(async () => {
+          const response = await fetch('/actions/site-module/company/');
+          this.companies = await response.json();
+          this.loading = false;
+        }, 200);
+      },
+      viewCompany(company) {
+        this.selectedCompany = company;
+        this.showDetails = true;
+        this.showCompanies = false;
+        this.showForm = false;
+      },
+      viewAddCompanyForm() {
+        this.showDetails = false;
+        this.showCompanies = false;
+        this.showForm = true;
+      },
+      viewCompanies() {
+        this.showDetails = false;
+        this.showForm = false;
+        this.showCompanies = true;
+      },
+      $delimiters: ['#{', '}']
+    }).mount();
+  </script>
+{% endblock %}

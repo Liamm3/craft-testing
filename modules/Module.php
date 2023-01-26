@@ -6,7 +6,10 @@ use Craft;
 use craft\base\Model;
 use craft\elements\Entry;
 use craft\events\DefineBehaviorsEvent;
+use craft\events\RegisterComponentTypesEvent;
+use craft\generator\Command;
 use modules\behaviors\CompanyBehavior;
+use modules\generators\Behavior;
 use yii\base\Event;
 use yii\base\Module as BaseModule;
 
@@ -60,5 +63,10 @@ class Module extends BaseModule {
     {
         // Register event handlers here ...
         // (see https://craftcms.com/docs/4.x/extend/events.html to get started)
+        if (class_exists(Command::class)) {
+            Event::on(Command::class, Command::EVENT_REGISTER_GENERATOR_TYPES, function (RegisterComponentTypesEvent $event) {
+                $event->types[] = Behavior::class;
+            });
+        }
     }
 }

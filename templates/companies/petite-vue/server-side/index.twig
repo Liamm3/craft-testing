@@ -6,13 +6,21 @@
     .all() %}
 
 {% set transformedCompanies =
-    companies | map(company => company.leanTransform) | json_encode %}
+    companies | map(company => company.leanTransform) %}
 
 {% block content %}
     {% include "_includes/heading" with { text: "Companies - Petite Vue - Server Side"} %}
-    <div v-scope>
+    <div
+      hidden
+      v-scope
+      @vue:mounted="$el.hidden = false"
+    >
         <ul v-for="company in companies">
-            <li>#{company.title} - #{company.city}</li>
+            <li>
+                <a href="#{company.url}">
+                    #{company.title} - #{company.city}
+                </a>
+            </li>
         </ul>
     </div>
 {% endblock %}
@@ -21,8 +29,8 @@
     <script type="module">
         import { createApp } from "https://unpkg.com/petite-vue?module";
         createApp({
-            companies: {{ transformedCompanies | raw }},
+            companies: {{ transformedCompanies | json_encode | raw }},
             $delimiters: ['#{', '}']
-        }).mount()
+        }).mount();
     </script>
 {% endblock %}
