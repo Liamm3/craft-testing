@@ -7,7 +7,7 @@
     v-scope
   >
     <div class="mb-5" @click="viewAddCompanyForm()" v-if="!showForm" v-scope="Button({ text: 'Add Company', color: 'emerald' })"></div>
-    <ul v-show="showCompanies && !loading" class="grid grid-cols-4 gap-4">
+    <ul v-show="showCompanies && !loading" class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
       <li v-for="company in companies" class="border-stone-400 border-solid border-2 p-3 rounded">
         <h2 class="text-center mb-3">
           #{company.title}
