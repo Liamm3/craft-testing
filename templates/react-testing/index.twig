@@ -1,0 +1,11 @@
+{% extends "_layouts/base" %}
+
+{% block content %}
+  <h1 class="text-3xl text-center mb-5">React Testing</h1>
+  <div id="root"></div>
+  {#<div id="component-container"></div>#}
+{% endblock %}
+
+{% block scripts %}
+  {{ craft.vite.script("src/js/pages/react-testing/index.tsx")}}
+{% endblock %}

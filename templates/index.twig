@@ -4,10 +4,12 @@
     { location: "/posts", text: "Posts" },
     { location: "/async-posts", text: "Async Posts" },
     { location: "/companies", text: "Companies" },
+    { location: "/react-testing", text: "React Testing" },
 ] %}
 
 {% block content %}
     <h1 class="text-3xl text-center mb-5">Welcome to {{ siteName }}!</h1>
+    {#<div id="component-container"></div>#}
     {% include "_includes/grid-list" with { links } %}
 {% endblock %}
 

@@ -4,6 +4,7 @@ import path from 'node:path';
 import glob from 'glob';
 import viteCompression from 'vite-plugin-compression';
 import vue from "@vitejs/plugin-vue";
+import react from "@vitejs/plugin-react";
 import ViteRestart from 'vite-plugin-restart';
 import { fileURLToPath } from 'node:url';
 
@@ -35,6 +36,8 @@ export default defineConfig(({command}) => ({
     },
   },
   plugins: [
+
+    react(),
 /*    manifestSRI(),
     viteCompression({
       filter: /\.(js|mjs|json|css|map)$/i
